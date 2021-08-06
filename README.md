@@ -46,4 +46,4 @@ The `REGISTRY_REDHAT` variable holds the url to the redhat UBI image repository.
 Feel free to contribute in any way you want. Every help is appreciated. Adding new features like other CA servers should be first discussed in an issue to avoid possible missunderstandings. Asking for help is also really appreated! Just ask!
 
 ## License
-[This project is licensed under MIT](#License) wich means that you can use it for anything you want to, but it'd be nice if you add a reference to it's original copyright holder and include it's license inside of your software in any way. Thank you!
+[This project is licensed under MIT](https://github.com/MCWertGaming/docker-cert-provider/blob/main/LICENSE) wich means that you can use it for anything you want to, but it'd be nice if you add a reference to it's original copyright holder and include it's license inside of your software in any way. Thank you!
