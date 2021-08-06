@@ -27,13 +27,7 @@ docker build . \
     --build-arg CA_URL=https://ca.your.domain \
     --build-arg CA_FINGERPRINT=fingerprint-here \
     # repository configuration
-    --build-arg REGISTRY_DOCKERHUB=registry.your.domain \docker build . \
-    --tag registry.your.domain/container-name \
-    --build-arg CA_URL=https://ca.local.leven.dev \
-    --build-arg CA_FINGERPRINT=364328da65032b9f42cc3805c3ce431e58ec5575891eee7336b6642d0b905b05 \
-    # repository configuration
-    --build-arg REGISTRY_DOCKERHUB=docker-private.nexus.local.leven.dev \
-    --build-arg REGISTRY_REDHAT=docker-private.nexus.local.leven.dev
+    --build-arg REGISTRY_DOCKERHUB=registry.your.domain \
     --build-arg REGISTRY_REDHAT=registry.your.domain
 ```
 The `REGISTRY_DOCKERHUB` variable hold the url to the docker hub registry. The default value is docker.io, which is the official docker hub registry url. Your proxy should provide access to the official alpine image as that's the one used by this container.
