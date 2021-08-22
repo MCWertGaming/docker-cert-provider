@@ -1,9 +1,8 @@
 # set registry url's
 # change if you want to use a custom registry
-ARG REGISTRY_DOCKERHUB=docker.io
-ARG REGISTRY_REDHAT=registry.access.redhat.com
+ARG REGISTRY=docker.io
 
-FROM $REGISTRY_DOCKERHUB/alpine:latest as builder
+FROM $REGISTRY/alpine:latest as builder
 
 # change to use with your own step-ca instance
 ARG CA_URL
