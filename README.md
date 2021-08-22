@@ -26,15 +26,12 @@ docker build . \
     --tag registry.your.domain/container-name \
     --build-arg CA_URL=https://ca.your.domain \
     --build-arg CA_FINGERPRINT=fingerprint-here \
-    # repository configuration
-    --build-arg REGISTRY_DOCKERHUB=registry.your.domain \
-    --build-arg REGISTRY_REDHAT=registry.your.domain
+    # registry configuration
+    --build-arg REGISTRY=registry.your.domain
 ```
-The `REGISTRY_DOCKERHUB` variable hold the url to the docker hub registry. The default value is docker.io, which is the official docker hub registry url. Your proxy should provide access to the official alpine image as that's the one used by this container.
+The `REGISTRY` variable holds the url to the docker hub registry. The default value is docker.io, which is the official docker hub registry url. Your proxy should provide access to the official alpine image as that's the one used by this container.
 
-The `REGISTRY_REDHAT` variable holds the url to the redhat UBI image repository. UBI is free to use anmd the official registry at registry.access.redhat.com can be freely used without any authentication. You can either use a proxy that offers access to the ubi8/ubi-micro package through `registry.access.redhat.com`, or (probably only if you have it already setup) use the redhat registry of the [redhat certified container catalog](https://catalog.redhat.com/) `registry.redhat.io`, which requires a free redhat developer account.
-
-> Please note that custom registries are not required. Also you can either use no private registry at all, just one for any of both registries, or both. They can also both lay on the same URL but must be seperately specified.
+> Please note that custom registries are not required.
 
 ## Contributions
 Feel free to contribute in any way you want. Every help is appreciated. Adding new features like other CA servers should be first discussed in an issue to avoid possible missunderstandings. Asking for help is also really appreated! Just ask!
