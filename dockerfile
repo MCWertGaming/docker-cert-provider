@@ -13,5 +13,5 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repos
     && apk add step-cli \
     && step ca root root_ca.crt --ca-url $CA_URL --fingerprint $CA_FINGERPRINT
 
-FROM $REGISTRY_REDHAT/ubi8/ubi-micro:latest
+FROM scratch
 COPY --from=builder /root_ca.crt /root_ca.crt
